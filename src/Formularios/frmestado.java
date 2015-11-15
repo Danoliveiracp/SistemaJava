@@ -146,26 +146,31 @@ public class frmestado extends javax.swing.JFrame {
 
             }
         ));
+        tablest.setGridColor(new java.awt.Color(204, 204, 255));
         jScrollPane1.setViewportView(tablest);
 
+        primeiro.setIcon(new javax.swing.ImageIcon("C:\\Users\\DannieL\\Estudos\\JAVA\\Videos\\Sistema\\first.png")); // NOI18N
         primeiro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 primeiroActionPerformed(evt);
             }
         });
 
+        proximo.setIcon(new javax.swing.ImageIcon("C:\\Users\\DannieL\\Estudos\\JAVA\\Videos\\Sistema\\next.png")); // NOI18N
         proximo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proximoActionPerformed(evt);
             }
         });
 
+        ultimo.setIcon(new javax.swing.ImageIcon("C:\\Users\\DannieL\\Estudos\\JAVA\\Videos\\Sistema\\last.png")); // NOI18N
         ultimo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ultimoActionPerformed(evt);
             }
         });
 
+        anterior.setIcon(new javax.swing.ImageIcon("C:\\Users\\DannieL\\Estudos\\JAVA\\Videos\\Sistema\\previous.png")); // NOI18N
         anterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 anteriorActionPerformed(evt);
@@ -187,12 +192,13 @@ public class frmestado extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(codest, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(nomest, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(11, 11, 11)
+                                .addComponent(codest, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(nomest, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(149, 149, 149)
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -205,17 +211,17 @@ public class frmestado extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(gravarest, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(alterarest, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(alterarest)
+                                .addGap(11, 11, 11)
+                                .addComponent(excluirest, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(excluirest)
-                                .addGap(13, 13, 13)
-                                .addComponent(primeiro, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(primeiro, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ultimo, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(anterior, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(proximo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ultimo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(anterior, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(proximo, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(27, 27, 27)
                                 .addComponent(cancest))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 618, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -460,7 +466,7 @@ public class frmestado extends javax.swing.JFrame {
 
         ArrayList dados = new ArrayList();
 
-        String[] colunas = new String[]{"id_estado", "nome", "sigla_estado"};
+        String[] colunas = new String[]{"CÓDIGO", "ESTADO", "SIGLA"};
 
         conecta.executasql(sql);
 
@@ -481,7 +487,7 @@ public class frmestado extends javax.swing.JFrame {
         tablest.getColumnModel().getColumn(0).setResizable(false);
         tablest.getColumnModel().getColumn(1).setPreferredWidth(380);
         tablest.getColumnModel().getColumn(1).setResizable(false);
-        tablest.getColumnModel().getColumn(2).setPreferredWidth(110);
+        tablest.getColumnModel().getColumn(2).setPreferredWidth(125);
         tablest.getColumnModel().getColumn(2).setResizable(false);
         tablest.getTableHeader().setReorderingAllowed(false);
         tablest.setAutoResizeMode(tablest.AUTO_RESIZE_OFF);
