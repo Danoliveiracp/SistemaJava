@@ -3,26 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package estudo;
-
-import Formularios.Principal;
-
+package projeto;
+import Formularios.Frmprincipal;
 /**
  *
  * @author DannieL
  */
-public class Estudo {
+public class Principal {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        Principal frm = new Principal();
+        Frmprincipal frm = new Frmprincipal();
         
         frm.setVisible(true);
         
         
     }
+
+    
+    
     
 }
